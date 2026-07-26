@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مدرسة LinguaViva للغات</title>
+    
+    <!-- Google Fonts: Cairo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom CSS File -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-purple-500 selection:text-white">
+
+    <!-- 1. شريط التنقل (Navbar) -->
+    <header class="fixed top-0 left-0 right-0 z-50 glass-nav border-b border-slate-100 shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- الشعار -->
+            <a href="#" class="text-3xl font-extrabold bg-clip-text text-transparent grad-blue-purple tracking-tight">
+                Lingua<span class="text-amber-500">Viva</span>
+            </a>
+
+            <!-- روابط التنقل - سطح المكتب -->
+            <nav class="hidden md:flex items-center gap-8 font-semibold text-slate-700">
+                <a href="#hero" class="hover:text-purple-600 transition-colors">الرئيسية</a>
+                <a href="#languages" class="hover:text-purple-600 transition-colors">اللغات</a>
+                <a href="#why-us" class="hover:text-purple-600 transition-colors">لماذا تختارنا</a>
+                <a href="#testimonials" class="hover:text-purple-600 transition-colors">الشهادات</a>
+                <a href="#contact" class="hover:text-purple-600 transition-colors">تواصل معنا</a>
+            </nav>
+
+            <!-- زر الإجراء والمنيو للجوال -->
+            <div class="flex items-center gap-4">
+                <a href="#contact" class="hidden sm:inline-block grad-blue-purple text-white font-bold px-6 py-2.5 rounded-full btn-hover-effect shadow-md">
+                    احجز حصتك
+                </a>
+                <button id="menu-btn" class="md:hidden text-slate-700 text-2xl focus:outline-none" aria-label="القائمة">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- قائمة الجوال -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white/95 border-b border-slate-100 px-6 py-4 flex flex-col gap-4 font-semibold text-slate-700 shadow-lg">
+            <a href="#hero" class="hover:text-purple-600 py-1">الرئيسية</a>
+            <a href="#languages" class="hover:text-purple-600 py-1">اللغات</a>
+            <a href="#why-us" class="hover:text-purple-600 py-1">لماذا تختارنا</a>
+            <a href="#testimonials" class="hover:text-purple-600 py-1">الشهادات</a>
+            <a href="#contact" class="hover:text-purple-600 py-1">تواصل معنا</a>
+        </div>
+    </header>
+
+    <!-- 2. القسم الرئيسي (Hero Section) -->
+    <section id="hero" class="pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden relative">
+        <div class="absolute -top-20 -right-20 w-96 h-96 bg-purple-200/50 rounded-full blur-3xl -z-10"></div>
+        <div class="absolute top-40 -left-20 w-80 h-80 bg-cyan-200/50 rounded-full blur-3xl -z-10"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <span class="inline-block px-4 py-1.5 rounded-full bg-purple-100 text-purple-700 font-bold text-sm mb-6 border border-purple-200">
+                🚀 ابدأ رحلتك اللغوية اليوم
+            </span>
+            <h1 class="text-4xl sm:text-6xl md:text-7xl font-black text-slate-900 leading-tight mb-6">
+                أتقن لغة جديدة و<span class="bg-clip-text text-transparent grad-blue-purple">افتح آفاقك</span> للعالم
+            </h1>
+            <p class="text-lg sm:text-xl text-slate-600 max-w-3xl mx-auto mb-10 leading-relaxed">
+                انضم إلى آلاف الطلاب واستمتع بتجربة تعلم تفاعلية مع أفضل المعلمين المعتمدين حول العالم. مناهج حديثة وجداول مرنة تناسب أسلوب حياتك.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#contact" class="w-full sm:w-auto grad-blue-purple text-white text-lg font-bold px-8 py-4 rounded-full btn-hover-effect shadow-xl">
+                    سجّل الآن واكتشف شغفك
+                </a>
+                <a href="#languages" class="w-full sm:w-auto grad-mint-turquoise text-slate-900 text-lg font-bold px-8 py-4 rounded-full btn-hover-effect shadow-md">
+                    احجز درسًا تجريبيًا مجانًا
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. قسم اللغات (Languages Grid) -->
+    <section id="languages" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl sm:text-5xl font-black text-slate-900 mb-4">اللغات المتاحة</h2>
+                <p class="text-slate-600 text-lg max-w-2xl mx-auto">اختر من بين أشهر اللغات العالمية وبكادر تعليمي متخصص لكل لغة</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- العربية -->
+                <div class="rounded-3xl p-8 grad-orange-yellow text-slate-900 card-hover shadow-lg flex flex-col justify-between">
+                    <div>
+                        <div class="w-16 h-16 bg-white/80 rounded-2xl flex items-center justify-center text-3xl mb-6 shadow-sm">🌴</div>
+                        <h3 class="text-2xl font-bold mb-2">العربية</h3>
+                        <p class="text-slate-700 font-medium mb-6">لغة الضاد والثقافة العريقة، مسارات متخصصة للناطقين بها وبغيرها.</p>
+                    </div>
+                    <a href="#contact" class="inline-flex items-center justify-between w-full bg-white text-slate-900 font-bold py-3 px-6 rounded-xl hover:bg-slate-900 hover:text-white transition-all">
+                        <span>اكتشف التفاصيل</span>
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </a>
+                </div>
+
+                <!-- الإنجليزية -->
+                <div class="rounded-3xl p-8 grad-blue-purple text-white card-hover shadow-lg flex flex-col justify-between">
+                    <div>
+                        <div class="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center text-3xl mb-6 shadow-sm">👑</div>
+                        <h3 class="text-2xl font-bold mb-2">الإنجليزية</h3>
+                        <p class="text-purple-100 font-medium mb-6">بوابتك للعمل والتواصل العالمي، من المستويات الأساسية حتى الإتقان.</p>
+                    </div>
+                    <a href="#contact" class="inline-flex items-center justify-between w-full bg-white text-slate-900 font-bold py-3 px-6 rounded-xl hover:bg-slate-900 hover:text-white transition-all">
+                        <span>اكتشف التفاصيل</span>
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </a>
+                </div>
+
+                <!-- الفرنسية -->
+                <div class="rounded-3xl p-8 grad-pink-peach text-white card-hover shadow-lg flex flex-col justify-between">
+                    <div>
+                        <div class="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center text-3xl mb-6 shadow-sm">🎨</div>
+                        <h3 class="text-2xl font-bold mb-2">الفرنسية</h3>
+                        <p class="text-white/90 font-medium mb-6">لغة الفن والدبلوماسية، تعلم النطق الصحيح والقواعد بسهولة.</p>
+                    </div>
+                    <a href="#contact" class="inline-flex items-center justify-between w-full bg-white text-slate-900 font-bold py-3 px-6 rounded-xl hover:bg-slate-900 hover:text-white transition-all">
+                        <span>اكتشف التفاصيل</span>
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </a>
+                </div>
+
+                <!-- الألمانية -->
+                <div class="rounded-3xl p-8 grad-ocean text-white card-hover shadow-lg flex flex-col justify-between">
+                    <div>
+                        <div class="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center text-3xl mb-6 shadow-sm">🏰</div>
+                        <h3 class="text-2xl font-bold mb-2">الألمانية</h3>
+                        <p class="text-white/90 font-medium mb-6">لغة العلوم والهندسة، إعداد شامل لمقابلات العمل واختبارات Goethe.</p>
+                    </div>
+                    <a href="#contact" class="inline-flex items-center justify-between w-full bg-white text-slate-900 font-bold py-3 px-6 rounded-xl hover:bg-slate-900 hover:text-white transition-all">
+                        <span>اكتشف التفاصيل</span>
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </a>
+                </div>
+
+                <!-- الإيطالية -->
+                <div class="rounded-3xl p-8 grad-mint-turquoise text-slate-900 card-hover shadow-lg flex flex-col justify-between">
+                    <div>
+                        <div class="w-16 h-16 bg-white/80 rounded-2xl flex items-center justify-center text-3xl mb-6 shadow-sm">🍕</div>
+                        <h3 class="text-2xl font-bold mb-2">الإيطالية</h3>
+                        <p class="text-slate-800 font-medium mb-6">عالم الموسيقى والأزياء، تعلم التحدث بسلاسة وثقة منذ الأسابيع الأولى.</p>
+                    </div>
+                    <a href="#contact" class="inline-flex items-center justify-between w-full bg-white text-slate-900 font-bold py-3 px-6 rounded-xl hover:bg-slate-900 hover:text-white transition-all">
+                        <span>اكتشف التفاصيل</span>
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </a>
+                </div>
+
+                <!-- الإسبانية -->
+                <div class="rounded-3xl p-8 grad-warm text-white card-hover shadow-lg flex flex-col justify-between">
+                    <div>
+                        <div class="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center text-3xl mb-6 shadow-sm">💃</div>
+                        <h3 class="text-2xl font-bold mb-2">الإسبانية</h3>
+                        <p class="text-white/90 font-medium mb-6">إحدى أكثر اللغات انتشاراً وشغفاً، منهج تفاعلي بالحوار المباشر.</p>
+                    </div>
+                    <a href="#contact" class="inline-flex items-center justify-between w-full bg-white text-slate-900 font-bold py-3 px-6 rounded-xl hover:bg-slate-900 hover:text-white transition-all">
+                        <span>اكتشف التفاصيل</span>
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. قسم "لماذا تختارنا" -->
+    <section id="why-us" class="py-20 bg-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl sm:text-5xl font-black text-slate-900 mb-4">لماذا تختار LinguaViva؟</h2>
+                <p class="text-slate-600 text-lg max-w-2xl mx-auto">نوفر لك بيئة تعليمية متكاملة تضمن لك تحقيق هدفك في أسرع وقت</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white p-8 rounded-3xl shadow-sm hover:shadow-md transition-shadow text-center">
+                    <div class="w-20 h-20 mx-auto mb-6 rounded-2xl grad-blue-purple text-white text-3xl flex items-center justify-center shadow-lg">
+                        <i class="fa-solid fa-chalkboard-user"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">معلمون أصليون</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">نخبة من المعلمين المعتمدين الناطقين باللغة كأم للتدريب على النطق الصحيح.</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-3xl shadow-sm hover:shadow-md transition-shadow text-center">
+                    <div class="w-20 h-20 mx-auto mb-6 rounded-2xl grad-mint-turquoise text-slate-900 text-3xl flex items-center justify-center shadow-lg">
+                        <i class="fa-solid fa-laptop-code"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">مناهج تفاعلية</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">استخدام أدوات حديثة، تمارين ذكية، ومحاكاة يومية لتثبيت المهارات.</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-3xl shadow-sm hover:shadow-md transition-shadow text-center">
+                    <div class="w-20 h-20 mx-auto mb-6 rounded-2xl grad-pink-peach text-white text-3xl flex items-center justify-center shadow-lg">
+                        <i class="fa-solid fa-calendar-check"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">جداول مرنة</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">اختر الأوقات التي تناسب جدولك اليومي مع إمكانية تعديل الحصص بسهولة.</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-3xl shadow-sm hover:shadow-md transition-shadow text-center">
+                    <div class="w-20 h-20 mx-auto mb-6 rounded-2xl grad-ocean text-white text-3xl flex items-center justify-center shadow-lg">
+                        <i class="fa-solid fa-award"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">شهادة معتمدة</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">احصل على شهادة توثّق مستواك بعد إتمام كل مرحلة بنجاح لتطوير سيرتك الذاتية.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. شهادات المتدربين (Slider) -->
+    <section id="testimonials" class="py-20 bg-white overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl sm:text-5xl font-black text-slate-900 mb-4">قصص نجاح طلابنا</h2>
+                <p class="text-slate-600 text-lg">استمع لما يقوله متدربونا عن تجربتهم معنا</p>
+            </div>
+
+            <div class="relative max-w-4xl mx-auto">
+                <div id="slider-container" class="overflow-hidden rounded-3xl bg-slate-50 border border-slate-100 p-8 sm:p-12 shadow-sm">
+                    <div id="slider-track" class="flex transition-transform duration-500 ease-in-out">
+                        
+                        <div class="w-full flex-shrink-0 text-center px-4">
+                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=200" alt="سارة" class="w-24 h-24 rounded-full mx-auto mb-6 object-cover ring-4 ring-purple-200">
+                            <div class="text-amber-400 text-xl mb-4">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                            <p class="text-slate-700 text-lg sm:text-xl italic mb-6 leading-relaxed">"تمكنت من اجتياز اختبار اللغة الإنجليزية بفضل المتابعة الشخصية المتميزة. الأسلوب التفاعلي جعل التعلم ممتعاً وبدون أي توتر!"</p>
+                            <h4 class="font-bold text-lg text-slate-900">سارة أحمد</h4>
+                            <span class="text-slate-500 text-sm">متدربة لغة إنجليزية</span>
+                        </div>
+
+                        <div class="w-full flex-shrink-0 text-center px-4">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200" alt="عمر" class="w-24 h-24 rounded-full mx-auto mb-6 object-cover ring-4 ring-emerald-200">
+                            <div class="text-amber-400 text-xl mb-4">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                            <p class="text-slate-700 text-lg sm:text-xl italic mb-6 leading-relaxed">"كورسات اللغة الألمانية ممتازة جدًا. المعلم كان صبوراً وقدم لنا تطبيقات عملية ساعدتني كثيراً في الحصول على قبول جامعي."</p>
+                            <h4 class="font-bold text-lg text-slate-900">عمر خالد</h4>
+                            <span class="text-slate-500 text-sm">متدرب لغة ألمانية</span>
+                        </div>
+
+                        <div class="w-full flex-shrink-0 text-center px-4">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=200" alt="ريم" class="w-24 h-24 rounded-full mx-auto mb-6 object-cover ring-4 ring-pink-200">
+                            <div class="text-amber-400 text-xl mb-4">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                            <p class="text-slate-700 text-lg sm:text-xl italic mb-6 leading-relaxed">"المرونة في أوقات الحصص كانت السبب الرئيسي في استمراري. اللغة الإسبانية أصبحت لغتي الثانية خلال 6 أشهر فقط!"</p>
+                            <h4 class="font-bold text-lg text-slate-900">ريم علي</h4>
+                            <span class="text-slate-500 text-sm">متدربة لغة إسبانية</span>
+                        </div>
+
+                    </div>
+                </div>
+
+                <button id="prev-btn" class="absolute top-1/2 -right-4 sm:-right-6 -translate-y-1/2 w-12 h-12 rounded-full bg-white shadow-md text-slate-800 flex items-center justify-center hover:bg-slate-900 hover:text-white transition-all focus:outline-none">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+                <button id="next-btn" class="absolute top-1/2 -left-4 sm:-left-6 -translate-y-1/2 w-12 h-12 rounded-full bg-white shadow-md text-slate-800 flex items-center justify-center hover:bg-slate-900 hover:text-white transition-all focus:outline-none">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. نموذج التواصل (Contact Section) -->
+    <section id="contact" class="py-20 bg-slate-100">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-3xl p-8 sm:p-12 shadow-xl border border-slate-100">
+                <div class="text-center mb-10">
+                    <h2 class="text-3xl font-black text-slate-900 mb-2">ابدأ رحلتك التعليمية الآن</h2>
+                    <p class="text-slate-600">املأ النموذج وسنتواصل معك خلال 24 ساعة لترتيب درساً تجريبياً مجانياً</p>
+                </div>
+
+                <form id="contact-form" class="space-y-6">
+                    <div>
+                        <label for="name" class="block font-bold text-slate-700 mb-2">الاسم الكامل</label>
+                        <input type="text" id="name" required placeholder="أدخل اسمك الكريم" class="w-full px-5 py-3.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all">
+                    </div>
+
+                    <div>
+                        <label for="email" class="block font-bold text-slate-700 mb-2">البريد الإلكتروني</label>
+                        <input type="email" id="email" required placeholder="example@domain.com" class="w-full px-5 py-3.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all">
+                    </div>
+
+                    <div>
+                        <label for="message" class="block font-bold text-slate-700 mb-2">اللغة والرسالة</label>
+                        <textarea id="message" rows="4" required placeholder="حدد اللغة التي ترغب بتعلمها وأي ملاحظات إضافية..." class="w-full px-5 py-3.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"></textarea>
+                    </div>
+
+                    <button type="submit" class="w-full grad-pink-peach text-white text-lg font-bold py-4 rounded-xl btn-hover-effect shadow-lg">
+                        إرسال الطلب
+                    </button>
+                </form>
+
+                <div id="success-message" class="hidden mt-6 p-6 bg-emerald-50 border border-emerald-200 rounded-2xl text-center text-emerald-800">
+                    <i class="fa-solid fa-circle-check text-4xl text-emerald-500 mb-3"></i>
+                    <h4 class="font-bold text-xl mb-1">تم إرسال طلبك بنجاح!</h4>
+                    <p class="text-sm">شكرًا لتواصلك معنا، سيتواصل معك أحد مستشارينا المهاراتيين قريبًا.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. تذييل الصفحة (Footer) -->
+    <footer class="bg-slate-900 text-slate-400 pt-16 pb-8 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+                <div class="md:col-span-1">
+                    <a href="#" class="text-3xl font-extrabold text-white tracking-tight inline-block mb-4">
+                        Lingua<span class="text-amber-500">Viva</span>
+                    </a>
+                    <p class="text-sm leading-relaxed mb-6">مؤسسة تعليمية رائدة تقدم حلول تعليم اللغات المعاصرة بأساليب مبتكرة وكادر عالي الكفاءة.</p>
+                    <div class="flex gap-4 text-lg">
+                        <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-white hover:bg-purple-600 transition-colors"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-white hover:bg-purple-600 transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-white hover:bg-purple-600 transition-colors"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-white hover:bg-purple-600 transition-colors"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-4">روابط سريعة</h4>
+                    <ul class="space-y-2.5 text-sm">
+                        <li><a href="#hero" class="hover:text-white transition-colors">الرئيسية</a></li>
+                        <li><a href="#languages" class="hover:text-white transition-colors">جميع اللغات</a></li>
+                        <li><a href="#why-us" class="hover:text-white transition-colors">مميزاتنا</a></li>
+                        <li><a href="#testimonials" class="hover:text-white transition-colors">آراء الطلاب</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-4">اللغات المتاحة</h4>
+                    <ul class="space-y-2.5 text-sm">
+                        <li><a href="#languages" class="hover:text-white transition-colors">اللغة الإنجليزية</a></li>
+                        <li><a href="#languages" class="hover:text-white transition-colors">اللغة الألمانية</a></li>
+                        <li><a href="#languages" class="hover:text-white transition-colors">اللغة الفرنسية</a></li>
+                        <li><a href="#languages" class="hover:text-white transition-colors">اللغة الإسبانية</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-4">تواصل معنا</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-location-dot text-purple-400"></i> الجزائر، العاصمة</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-phone text-purple-400"></i> +213 550 000 000</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-envelope text-purple-400"></i> info@linguaviva.com</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-slate-800 pt-8 text-center text-xs text-slate-500">
+                جميع الحقوق محفوظة © 2026 مدرسة LinguaViva للغات.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JS File -->
+    <script src="script.js"></script>
+</body>
+</html>
